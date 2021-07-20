@@ -1,0 +1,8 @@
+prefix=/home/abhinav137/Desktop/ROSjects/ROSject_1/src/helloWorld/cmake-build-debug/devel
+
+Name: helloWorld
+Description: Description of helloWorld
+Version: 1.0.0
+Cflags: -I/home/abhinav137/Desktop/ROSjects/ROSject_1/src/helloWorld/cmake-build-debug/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

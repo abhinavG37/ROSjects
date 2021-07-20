@@ -3,6 +3,6 @@ prefix=/home/abhinav137/Desktop/ROSjects/ROSject_1/install
 Name: helloWorld
 Description: Description of helloWorld
 Version: 1.0.0
-Cflags: 
+Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: message_runtime
