@@ -1,0 +1,3 @@
+<gazebo reference="chassis">
+  <material>Gazebo/Orange</material>
+</gazebo>
