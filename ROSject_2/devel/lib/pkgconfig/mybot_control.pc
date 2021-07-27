@@ -1,0 +1,8 @@
+prefix=/home/abhinav137/Desktop/ROSjects/ROSject_2/devel
+
+Name: mybot_control
+Description: Description of mybot_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
