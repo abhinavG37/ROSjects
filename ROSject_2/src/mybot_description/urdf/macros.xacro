@@ -21,6 +21,8 @@
 		izz="${2*m*r*r/5}"
 	  />
 	</xacro:macro>
+
+
 	<xacro:macro name="wheel" params="lr tY">
 
 	  <link name="${lr}_wheel">
@@ -42,7 +44,7 @@
 		<inertial>
 		  <origin xyz="0 0 0" rpy="0 ${PI/2} ${PI/2}" />
 		  <mass value="${wheelMass}"/>
-		  <cylinder_inertia m="${wheelMass}" r="${wheelRadius}" h="${wheelWidth}"/>
+		  <xacro:cylinder_inertia m="${wheelMass}" r="${wheelRadius}" h="${wheelWidth}"/>
 		</inertial>
 	  </link>
 
@@ -69,10 +71,10 @@
 	  <transmission name="${lr}_trans">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="${lr}_wheel_hinge">
-		  <hardwareInterface>EffortJointInterface</hardwareInterface>
+		  <EffortJointInterface>EffortJointInterface</EffortJointInterface>
 		</joint>
 		<actuator name="${lr}Motor">
-		  <hardwareInterface>EffortJointInterface</hardwareInterface>
+		  <EffortJointInterface>EffortJointInterface</EffortJointInterface>
 		  <mechanicalReduction>10</mechanicalReduction>
 		</actuator>
 	  </transmission>
