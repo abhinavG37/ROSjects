@@ -25,20 +25,21 @@
 	<xacro:property name="cameraMass" value="0.1"/>
 	<!-- End of common prperties description -->
 
-	<link name="footprint">
-	<inertial>
-		<inertia name="baseFrameInertia">
-			ixx="0.0" ixy="0.0" ixz="0.0"
-			iyy="0.0" iyz="0.0"
-			izz="0.0"/>
-		</inertia>
-	</inertial>
-	</link>
+<!--	<link name="footprint">-->
+<!--	<inertial>-->
+<!--		<mass value="0.0"/>-->
+<!--		<inertia name="baseFrameInertia">-->
+<!--			ixx="1.0" ixy="0.0" ixz="0.0"-->
+<!--			iyy="0.0" iyz="0.0"-->
+<!--			izz="0.0"/>-->
+<!--		</inertia>-->
+<!--	</inertial>-->
+<!--	</link>-->
 
-	<joint name="base_joint" type="fixed">
-		<parent link="footprint"/>
-		<child link="chassis"/>
-	</joint>
+<!--	<joint name="base_joint" type="fixed">-->
+<!--		<parent link="footprint"/>-->
+<!--		<child link="chassis"/>-->
+<!--	</joint>-->
 
 
 	<link name='chassis'>
@@ -92,6 +93,7 @@
 		</inertial>
 	</link>
 
+<!--Macros for wheels: Links and Joints both-->
 	<xacro:wheel lr="left" tY="1"/>
 	<xacro:wheel lr="right" tY="-1"/>
 

@@ -11,4 +11,9 @@
   <material>Gazebo/blue</material>
 </gazebo>
 
+<gazebo>
+    <plugin name="differential_drive_controller" filename="libdiffdrive_plugin.so">
+      <robotNamespace>/mybot</robotNamespace>
+    </plugin>
+ </gazebo>
 </robot>
