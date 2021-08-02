@@ -23,4 +23,4 @@ A basic ROSJect for a **Hello World** package
   * If your joints are "continuous", the controller launch file needs joint state publisher if you want to see the wheels physically rotate
   * If the joint type is "fixed", robot state publisher node in the controller launch file can do the trick
   * Check changelog of lines 9-17 of mybot_control.launch for context to the no transform problem
-
+![Completed MybotSpawn](Screenshots/ROSject_2/mybotSpawn_completed.png)
