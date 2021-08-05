@@ -41,7 +41,7 @@
 <!--		<child link="chassis"/>-->
 <!--	</joint>-->
 
-
+<!--	<link name="dummy_link" />-->
 	<link name='chassis'>
 		<pose>0 0 0.1 0 0 0</pose>
 <!--		Box of chassis properties-->
@@ -64,6 +64,10 @@
 			<xacro:box_inertia m="${chassisMass}" x="${chassisLength}" y="${chassisWidth}" z="${chassisHeight}"/>
 		</inertial>
 	</link>
+<!--	<joint name="dummy" type="fixed">-->
+<!--		<parent link="dummy_link" />-->
+<!--		<child link="base_link" />-->
+<!--	</joint>-->
 
 	<joint name="fixed" type="fixed">
 		<parent link="chassis"/>
