@@ -33,5 +33,5 @@ A basic ROSJect for a **Hello World** package
   * All controllers defined in config/mybot_control.yaml need to be mentioned in the controller manager/spawn node arguments
   * Install effort controllers for Noetic through `sudo apt get-install ros-noetic-effort-controllers`
     [The controller manager wiki](http://wiki.ros.org/controller_manager)
-![](Screenshots/ROSject_2/Effort Joint Motion Completed(1).png)
-![](Screenshots/ROSject_2/Effort Joint Motion Completed(2).png)
+![Image 1](Screenshots/ROSject_2/Effort Joint Motion Completed(1).png)
+![Image 2](Screenshots/ROSject_2/Effort Joint Motion Completed(2).png)
