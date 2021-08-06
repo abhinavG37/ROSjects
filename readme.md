@@ -24,3 +24,12 @@ A basic ROSJect for a **Hello World** package
   * If the joint type is "fixed", robot state publisher node in the controller launch file can do the trick
   * Check changelog of lines 9-17 of mybot_control.launch for context to the no transform problem
 ![Completed MybotSpawn](Screenshots/ROSject_2/mybotSpawn_completed.png)
+
+
+
+* The transmission syntax is different from past ROS versions
+  * Both joint and actuator units require a **<hardware_interface>** tag
+  * `**<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>**` is the way to put it for an effort joint
+  * All controllers defined in config/mybot_control.yaml need to be mentioned in the controller manager/spawn node arguments
+  * Install effort controllers for Noetic through `sudo apt get-install ros-noetic-effort-controllers`
+  [The controller manager wiki](http://wiki.ros.org/controller_manager)
