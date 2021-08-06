@@ -11,10 +11,10 @@ A basic ROSJect for a **Hello World** package
 * Adds a number of changes to the CMakeLists.txt of **hello_world** to accomodate a custom message file **num.msg**
 * Due to auto CMake reload, a redundant **helloWorld** folder gets created, yet to remove it
 
-## ROSject_2  
+## ROSject_2
 
 ![Model generated looks like this](Screenshots/ROSject_2/mybotSpawn.png)
-* Model colors spawn arbitrarily, could not affect this properly for some reason. 
+* Model colors spawn arbitrarily, could not affect this properly for some reason.
 * Controller added to the joints, needs two packages installed:
   * Robot State Publisher
   * Joint State Publisher
@@ -23,4 +23,15 @@ A basic ROSJect for a **Hello World** package
   * If your joints are "continuous", the controller launch file needs joint state publisher if you want to see the wheels physically rotate
   * If the joint type is "fixed", robot state publisher node in the controller launch file can do the trick
   * Check changelog of lines 9-17 of mybot_control.launch for context to the no transform problem
-![Completed MybotSpawn](Screenshots/ROSject_2/mybotSpawn_completed.png)
+    ![Completed MybotSpawn](Screenshots/ROSject_2/mybotSpawn_completed.png)
+
+
+
+* The transmission syntax is different from past ROS versions
+  * Both joint and actuator units require a **<hardware_interface>** tag
+  * `**<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>**` is the way to put it for an effort joint
+  * All controllers defined in config/mybot_control.yaml need to be mentioned in the controller manager/spawn node arguments
+  * Install effort controllers for Noetic through `sudo apt get-install ros-noetic-effort-controllers`
+    [The controller manager wiki](http://wiki.ros.org/controller_manager)
+![](Screenshots/ROSject_2/Effort Joint Motion Completed(1).png)
+![](Screenshots/ROSject_2/Effort Joint Motion Completed(2).png)
