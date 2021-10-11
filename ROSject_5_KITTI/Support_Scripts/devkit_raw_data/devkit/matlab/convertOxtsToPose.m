@@ -1,4 +1,4 @@
-function pose = convertOxtsToPose(oxts)
+ function pose = convertOxtsToPose(oxts)
 % converts a list of oxts measurements into metric poses,
 % starting at (0,0,0) meters, OXTS coordinates are defined as
 % x = forward, y = right, z = down (see OXTS RT3000 user manual)
